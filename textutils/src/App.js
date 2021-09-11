@@ -1,11 +1,11 @@
-import './App.css';
-import Navbar from './components/Navbar';
+import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-    return (
-        <>
-<Navbar/>
-        </>
-    );
+  return (
+    <>
+      <Navbar title="TextUtils" aboutText="About us" />
+    </>
+  );
 }
 export default App;
