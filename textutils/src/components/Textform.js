@@ -12,7 +12,7 @@ export default function Textform(props) {
         let newText = text.toLocaleLowerCase();
         setText(newText);
     }
-
+    
     const handleClearClick = ()=>{
         // console.log("Clear text was Clicked: " + text);
         let newText = '';
