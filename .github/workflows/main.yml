@@ -38,6 +38,6 @@ jobs:
         run: npm install -g surge
       
       - name: deploying on surge
-        run: surge ./build https://reacttextutils.surge.sh/ --token ${{secrests.SURGE_TOKEN}}
+        run: surge ./build https://reacttextutils.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
 
     
