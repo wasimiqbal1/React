@@ -35,7 +35,7 @@ export default function Textform(props) {
         setText(newtext.join(" "))
     }
 
-    const [text, setText] = useState("Entre Text here ");
+    const [text, setText] = useState("Entre Text  ");
 
     return (
         <>
