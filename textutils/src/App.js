@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
-import Alert from "./components/Alert";
+// import Alert from "./components/Alert";
 
 function App() {
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
