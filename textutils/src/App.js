@@ -1,5 +1,5 @@
 import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
@@ -7,7 +7,7 @@ import Alert from "./components/Alert";
 
 function App() {
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
-  const [alert, setAlert] = useState(null);
+  const [alert, setAlert] = useState(null); 
 
   const showAlert = (message, type)=>{
     setAlert({
@@ -25,6 +25,7 @@ function App() {
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "Success");
       document.title = "TextUtils-Dark Mode";
+
     }
     else{
       setMode('light');
@@ -41,7 +42,7 @@ function App() {
     <Alert alert={alert}/>
     <div className="container my-3">
     <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
-    {/* <About/> */}
+    <About/>
     </div>
     </>
   );
