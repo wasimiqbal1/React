@@ -8,8 +8,7 @@ import Alert from "./components/Alert";
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom";
+  } from "react-router-dom";
 
 
 function App() {
@@ -46,7 +45,7 @@ function App() {
     {/* <Navbar title="TextUtils" aboutText="About TextUtils" /> */}
     {/* <Navbar/> */}
     <Router>
-    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+    <Navbar tintle="TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert}/>
     <div className="container my-3">
       <Switch>
