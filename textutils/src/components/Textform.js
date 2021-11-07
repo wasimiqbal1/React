@@ -33,6 +33,7 @@ export default function Textform(props) {
         let text = document.getElementById('myBox');
         text.select ();
         navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
         props.showAlert("Copied to Clipboard","Success")
     }
 
@@ -62,7 +63,7 @@ export default function Textform(props) {
             <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} word & {text.length} characters</p>
             <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes read</p>
             <h2>Preview</h2>
-            <p>{text.length>0?text:"Enter something in the textbox above to preview it here"}</p>
+            <p>{text.length>0?text:"Nothing to preview!"}</p>
 
         </div>
         </>
