@@ -53,7 +53,7 @@ function App() {
             <About mode={mode}/>
           </Route>
           <Route exact path="/">
-          <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
+          <Textform showAlert={showAlert} heading ="TextUtils - Word Counter, Character Counter, Remove extra spaces" mode={mode}/>
           </Route>
     </Switch>
     </div>
