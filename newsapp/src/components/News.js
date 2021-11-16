@@ -8,17 +8,13 @@ class News extends Component {
                 <h2>News - Top Headlines</h2>
                 <div className="row">
                     <div className="col-md-3">
-                    <NewsItem title="myTitle" description="mydesc"/>
+                        <NewsItem title="myTitle" description="mydesc"/>
                     </div>
-                </div>
-                <div className="row">
                     <div className="col-md-3">
-                    <NewsItem title="myTitle" description="mydesc"/>
+                        <NewsItem title="myTitle" description="mydesc"/>
                     </div>
-                </div>
-                <div className="row">
                     <div className="col-md-3">
-                    <NewsItem title="myTitle" description="mydesc"/>
+                        <NewsItem title="myTitle" description="mydesc"/>
                     </div>
                 </div>
             </div>
