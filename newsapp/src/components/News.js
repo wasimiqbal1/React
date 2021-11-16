@@ -6,9 +6,21 @@ class News extends Component {
         return (
             <div className="container my-3">
                 <h2>News - Top Headlines</h2>
-                <NewsItem title="myTitle" description="mydesc"/>
-                <NewsItem/>
-                <NewsItem/>              
+                <div className="row">
+                    <div className="col-md-3">
+                    <NewsItem title="myTitle" description="mydesc"/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-3">
+                    <NewsItem title="myTitle" description="mydesc"/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-3">
+                    <NewsItem title="myTitle" description="mydesc"/>
+                    </div>
+                </div>
             </div>
         );
     }
