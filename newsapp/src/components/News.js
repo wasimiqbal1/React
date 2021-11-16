@@ -4,11 +4,11 @@ import NewsItem from './Newsitem';
 class News extends Component {
     render() {
         return (
-            <div>
-                This is a news Component
+            <div className="container my-3">
+                <h2>News - Top Headlines</h2>
+                <NewsItem title="myTitle" description="mydesc"/>
                 <NewsItem/>
-                <NewsItem/>
-                <NewsItem/>             
+                <NewsItem/>              
             </div>
         );
     }
