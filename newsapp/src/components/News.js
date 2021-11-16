@@ -8,8 +8,7 @@ class News extends Component {
                 This is a news Component
                 <NewsItem/>
                 <NewsItem/>
-                <NewsItem/>
-                
+                <NewsItem/>             
             </div>
         );
     }
