@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import NewsItem from './Newsitem';
 
 class News extends Component {
-    articles = [{
-        "source": { "id": "nbc-news", "name": "NBC News" },
+    articles = [
+        {"source": { "id": "nbc-news", "name": "NBC News" },
         "author": "Marlene Lenthang",
         "title": "Video shows dramatic rescue of baby, 9 others from rushing floodwaters in Washington - NBC News",
         "description": "Dramatic video shows the moment U.S. Coast Guard helicopter crew members rescue 10 people, including a baby, from murky floodwaters that have inundated parts of Washington state following record rainfall in the Pacific Northwest.",
@@ -33,6 +33,7 @@ class News extends Component {
         "content": "The Macklowe Collection, as it became known, garnered $676.1 million in sales late Monday in the presence of more than 300 art lovers, according to auction house Sothebys. The eye-watering figure is … [+3648 chars]"
     }
 ]
+
     constructor(){
         super();
         console.log("Hello I am a constructor from News Component")
