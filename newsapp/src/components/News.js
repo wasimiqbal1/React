@@ -48,17 +48,15 @@ class News extends Component {
             <div className="container my-3">
                 <h2>News - Top Headlines</h2>
                 <div className="row">
-                    <div className="col-md-4">
-                        <NewsItem title="myTitle" description="mydesc" imageUrl = "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2021-11/21116-washington-coast-guard-mb-1135-6def47.jpg"/>
-                    </div>
-                    <div className="col-md-4">
-                        <NewsItem title="myTitle" description="mydesc"/>
-                    </div>
-                    <div className="col-md-4">
-                        <NewsItem title="myTitle" description="mydesc"/>
-                    </div>
+                {this.state.articles.map((element)=>{
+                    return <div className="col-md-4" key = {element.url} >
+                    <NewsItem title={element.title.slice(0,45)} description={element.description.slice(0,88)} imageUrl = {element.urlToImage}
+                    newsUrl= {element.url}/>
                 </div>
+                })}
+                
             </div>
+        </div>
         );
     }
 }
