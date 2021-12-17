@@ -7,7 +7,8 @@ class News extends Component {
         super();
         this.state = {
             articles: [],
-            loading: false
+            loading: false,
+            page:1
         }
     }
 
