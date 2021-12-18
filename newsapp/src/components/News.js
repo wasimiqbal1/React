@@ -22,7 +22,8 @@ class News extends Component {
 
     handlePrevClick = async () => {
         console.log("Previous")
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3f3168e5e3a8491c9485b6f0963bb15e&page=${this.state.page - 1}&pageSize=20`;
+        let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3f3168e5e3a8491c9485b6f0963bb15e&page=$
+        {this.state.page - 1}&pageSize=20`;
         let data = await fetch(url);
         let parsedData = await data.json()
         console.log(parsedData);
@@ -35,7 +36,6 @@ class News extends Component {
     handleNextClick = async () => {
         console.log("Next");
         if (this.state.page + 1 > Math.ceil(this.state.totalResults / 20)) {
-
         }
         else {
             let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3f3168e5e3a8491c9485b6f0963bb15e&page=
@@ -51,10 +51,9 @@ class News extends Component {
     }
 
     render() {
-        console.log("render")
         return (
             <div className="container my-3">
-                <h2>News - Top Headlines</h2>
+                <h1 className="text-centre">News - Top Headlines</h1>
                 <div className="row">
                     {this.state.articles.map((element) => {
                         return <div className="col-md-4" key={element.url} >
@@ -65,7 +64,7 @@ class News extends Component {
                 </div>
                 <div className="container d-flex justify-content-between" >
                     <button disabled={this.state.page <= 1} type="button" className="btn btn-dark" onClick={this.handlePrevClick}> &larr; Previous</button>
-                    <button type="button" className="btn btn-dark" onClick={this.handleNextClick}>Next &rarr;</button>
+                    <button disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / 20)} type="button" className="btn btn-dark" onClick={this.handleNextClick}>Next &rarr;</button>
                 </div>
             </div>
         );
