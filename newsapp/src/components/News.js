@@ -13,13 +13,18 @@ class News extends Component {
         pageSize : PropTypes.number
     }
 
-    constructor() {
-        super();
+    capitlizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    constructor(props) {
+        super(props);
         this.state = {
             articles: [],
             loading: false,
             page: 1
         }
+        document.title = `${this.capitlizeFirstLetter(this.props.category)} - News Daily`;
     }
 
     async componentDidMount() {
@@ -63,7 +68,7 @@ class News extends Component {
     render() {
         return (
             <div className="container my-3">
-                <h1 className="text-center">News - Top Headlines</h1>
+                <h1 className="text-center">News - Top {this.capitlizeFirstLetter(this.props.category)} Headlines</h1>
                 <div className="row">
                     {this.state.articles.map((element) => {
                         return <div className="col-md-4" key={element.url} >
